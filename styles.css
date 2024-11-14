@@ -1,0 +1,145 @@
+/* Сховати звичайний контент спочатку */
+.hidden {
+    display: none;
+}
+
+/* Стилі для контейнера відео */
+#video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Стилі для відео */
+#intro-video {
+    min-width: 100%;
+    min-height: 100%;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 15px;
+    background-color: #f5f5f5;
+  }
+  
+  /* Стиль заголовків */
+  h1, h2 {
+    color: #333;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    
+  }
+  
+  /* Стиль для абзаців */
+  p {
+    margin-bottom: 15px;
+   
+  }
+  
+  /* Стиль для списків */
+  ul {
+    margin: 10px 0;
+    padding-left: 20px;
+    align-items: center;
+  }
+  
+  /* Стиль для виділеного тексту в списках */
+  strong {
+    color: #555;
+  }
+  /* Загальний фон з рухомими зірками */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000 url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+    overflow: scroll;
+    animation: moveStars 15s linear infinite;
+  }
+  
+  /* Анімація для руху зірок */
+  @keyframes moveStars {
+    from { background-position: 0 0; }
+    to { background-position: -1000px 1000px; }
+  }
+  
+  /* Стиль для заголовка h1 з анімацією світіння */
+  h1 {
+    font-size: 2.5em;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ff7cfc, 0 0 30px #ff7cfc, 0 0 40px #ff7cfc;
+    margin-bottom: 20px;
+    animation: glow 1.5s ease-in-out infinite alternate;
+  }
+  
+  /* Анімація світіння для h1 */
+  @keyframes glow {
+    from { text-shadow: 0 0 10px #ffffff, 0 0 20px #ff7cfc, 0 0 30px #ff7cfc; }
+    to { text-shadow: 0 0 20px #ff7cfc, 0 0 30px #ff7cfc, 0 0 40px #ff7cfc; }
+  }
+  
+  /* Стиль для заголовків h2 */
+  h2 {
+    font-size: 1.8em;
+    color: #ff7cfc;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  /* Стиль для параграфів з синьою рамкою */
+  p {
+    width: 80%;
+    max-width: 700px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 255, 0.1);
+    border: 2px solid #00b3ff;
+    padding: 15px;
+    text-align: center;
+    margin: 10px 0;
+    border-radius: 8px;
+  }
+  
+  /* Стиль для маркованих списків */
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 10px 0;
+    text-align: left;
+    color: #ffffff;
+  }
+  
+  /* Стиль для пунктів списку */
+  ul li {
+    background: rgba(0, 0, 255, 0.1);
+    border: 2px solid #00b3ff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    max-width: 600px;
+  }
+  
+  /* Розташування всіх елементів в контейнері по центру */
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
