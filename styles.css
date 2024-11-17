@@ -1,22 +1,32 @@
-/* Сховати звичайний контент спочатку */
 .hidden {
     display: none;
 }
-
-/* Стилі для контейнера відео */
-#video-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+#main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
 }
 
-/* Стилі для відео */
+
+#video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
 #intro-video {
-    min-width: 100%;
-    min-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 body {
     font-family: Arial, sans-serif;
@@ -26,7 +36,7 @@ body {
     background-color: #f5f5f5;
   }
   
-  /* Стиль заголовків */
+  
   h1, h2 {
     color: #333;
   }
@@ -41,24 +51,24 @@ body {
     
   }
   
-  /* Стиль для абзаців */
+ 
   p {
     margin-bottom: 15px;
    
   }
   
-  /* Стиль для списків */
+  
   ul {
     margin: 10px 0;
     padding-left: 20px;
     align-items: center;
   }
   
-  /* Стиль для виділеного тексту в списках */
+
   strong {
     color: #555;
   }
-  /* Загальний фон з рухомими зірками */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -72,13 +82,13 @@ body {
     animation: moveStars 15s linear infinite;
   }
   
-  /* Анімація для руху зірок */
+ 
   @keyframes moveStars {
     from { background-position: 0 0; }
     to { background-position: -1000px 1000px; }
   }
   
-  /* Стиль для заголовка h1 з анімацією світіння */
+
   h1 {
     font-size: 2.5em;
     color: #fff;
@@ -88,13 +98,13 @@ body {
     animation: glow 1.5s ease-in-out infinite alternate;
   }
   
-  /* Анімація світіння для h1 */
+
   @keyframes glow {
     from { text-shadow: 0 0 10px #ffffff, 0 0 20px #ff7cfc, 0 0 30px #ff7cfc; }
     to { text-shadow: 0 0 20px #ff7cfc, 0 0 30px #ff7cfc, 0 0 40px #ff7cfc; }
   }
   
-  /* Стиль для заголовків h2 */
+  
   h2 {
     font-size: 1.8em;
     color: #ff7cfc;
@@ -102,7 +112,7 @@ body {
     margin: 20px 0;
   }
   
-  /* Стиль для параграфів з синьою рамкою */
+
   p {
     width: 80%;
     max-width: 700px;
@@ -115,7 +125,7 @@ body {
     border-radius: 8px;
   }
   
-  /* Стиль для маркованих списків */
+
   ul {
     list-style-type: none;
     padding-left: 0;
@@ -124,7 +134,7 @@ body {
     color: #ffffff;
   }
   
-  /* Стиль для пунктів списку */
+  
   ul li {
     background: rgba(0, 0, 255, 0.1);
     border: 2px solid #00b3ff;
@@ -134,7 +144,7 @@ body {
     max-width: 600px;
   }
   
-  /* Розташування всіх елементів в контейнері по центру */
+
   .main-content {
     display: flex;
     flex-direction: column;
@@ -142,4 +152,49 @@ body {
     text-align: center;
     padding: 20px;
   }
+  section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .video-frame {
+    width: 260px;
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-bottom: 100px;
+  }
   
+  .video-frame video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  
+  .video-frame.left {
+    margin-right: 50px;
+  }
+  
+  .video-frame.right {
+    margin-left: 50px;
+  }
+  
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.7);
+    }
+    to {
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 0 0 60px rgba(255, 255, 255, 1);
+    }
+  }
+  
+  .video-frame {
+    animation: glow 2s infinite alternate;
+  }
